@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Turnip-Java
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/turnip-vue?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull
+    username: kang
+    password: kang
+  session:
+    jdbc:
+      table-name: spring_session
+      platform: mysql
+      initialize-schema: always
+      cleanup-cron: '0 0/5 * * * *'

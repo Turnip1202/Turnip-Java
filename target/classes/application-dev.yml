@@ -1,0 +1,39 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /api_v1
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.turnip.turnipjava.controller
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  basic:
+    enable: true
+    username: admin
+    password: 123456
+  setting:
+    language: zh_cn
+    # 是否显示默认的Response Code
+    enableResponseCode: true
+    # 是否开启请求参数缓存
+    enableRequestCache: true
+    # 是否开启Host
+    enableHost: false
+    # 是否开启Footer
+    enableFooter: false
+    # 是否开启搜索
+    enableSearch: true
+    # 是否开启HomeCustom
+    enableHomeCustom: true
+    # 是否开启动态参数调试功能
+    enableDynamicParameter: true
