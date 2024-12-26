@@ -10,15 +10,45 @@ import java.util.Map;
 
 @Data
 public class R<T, E> implements Serializable {
-
+    /**
+     * 状态码
+     * @see StateCode#getCode()
+     */
     private Integer code;
+    /**
+     * 返回数据
+     */
     private T data;
+    /**
+     * 错误提示，用户可阅读
+     *
+     * @see StateCode#getMsg() ()
+     */
     private String msg;
+    /**
+     * 请求路径
+     */
     private String path;
+    /**
+     * 成功标志
+     */
     private Boolean success;
+    /**
+     * 时间戳
+     */
     private LocalDateTime timestamp = LocalDateTime.now();
+    /**
+     * 错误详细信息
+     */
     private E errors;
 
+    /**
+     * 错误
+     * @param result
+     * @return
+     * @param <T>
+     * @param <E>
+     */
     public static <T, E> R<T, E> error(R<T, E> result) {
         return error(result.getCode(), result.getMsg(), result.getErrors(), result.getPath());
     }
