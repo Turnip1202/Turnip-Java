@@ -1,71 +1,72 @@
 package com.turnip.turnipjava.common;
 
-import com.turnip.turnipjava.constant.consist.StateCode;
-import com.turnip.turnipjava.constant.consist.StateConstants;
+import com.turnip.turnipjava.constant.consist.ResultState;
+import com.turnip.turnipjava.constant.consist.RStateConstants;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Map;
+
 
 @Data
-public class R<T, E> implements Serializable {
+public class R<T> implements Serializable {
+
     /**
-     * 状态码
-     * @see StateCode#getCode()
+     * 错误码
+     *
+     * @see ResultState#getCode()
      */
     private Integer code;
+
     /**
      * 返回数据
      */
     private T data;
+
     /**
      * 错误提示，用户可阅读
      *
-     * @see StateCode#getMsg() ()
+     * @see ResultState#getMsg() ()
      */
     private String msg;
+
     /**
      * 请求路径
      */
     private String path;
+
     /**
      * 成功标志
      */
     private Boolean success;
+
     /**
      * 时间戳
      */
     private LocalDateTime timestamp = LocalDateTime.now();
+
     /**
      * 错误详细信息
      */
-    private E errors;
+    private T errors;
 
-    /**
-     * 错误
-     * @param result
-     * @return
-     * @param <T>
-     * @param <E>
-     */
-    public static <T, E> R<T, E> error(R<T, E> result) {
+    public static <T> R<T> error(R<T> result) {
         return error(result.getCode(), result.getMsg(), result.getErrors(), result.getPath());
     }
 
-    public static <T, E> R<T, E> error(Integer code, String msg) {
+    public static <T> R<T> error(Integer code, String msg) {
         return error(code, msg, null, null);
     }
 
-    public static <T, E> R<T, E> error(Integer code, String msg, E errors) {
+    public static <T> R<T> error(Integer code, String msg, T errors) {
         return error(code, msg, errors, null);
     }
 
-    public static <T, E> R<T, E> error(Integer code, String msg, E errors, String path) {
-        if (StateConstants.SUCCESS.getCode().equals(code)) {
+    public static <T> R<T> error(Integer code, String msg, T errors, String path) {
+        if (RStateConstants.SUCCESS.getCode().equals(code)) {
             throw new IllegalArgumentException("Code should not be success code");
         }
-        R<T, E> r = new R<>();
+        R<T> r = new R<>();
         r.setCode(code);
         r.setMsg(msg);
         r.setErrors(errors);
@@ -74,43 +75,61 @@ public class R<T, E> implements Serializable {
         return r;
     }
 
-    public static <T, E> R<T, E> error(StateCode stateCode) {
-        return error(stateCode.getCode(), stateCode.getMsg(), null, null);
+    public static <T> R<T> error(ResultState rState) {
+        return error(rState.getCode(), rState.getMsg(), null, null);
     }
 
-    public static <T, E> R<T, E> error(StateCode stateCode, E errors) {
-        return error(stateCode.getCode(), stateCode.getMsg(), errors, null);
+    public static <T> R<T> error(ResultState rState, T errors) {
+        return error(rState.getCode(), rState.getMsg(), errors, null);
     }
 
-    public static <T, E> R<T, E> error(StateCode stateCode, E errors, String path) {
-        return error(stateCode.getCode(), stateCode.getMsg(), errors, path);
+    public static <T> R<T> error(ResultState rState, T errors, String path) {
+        return error(rState.getCode(), rState.getMsg(), errors, path);
     }
 
-    public static <T, E> R<T, E> success(T data) {
-        return success(StateConstants.SUCCESS, data, null);
+    /**
+     * 成功返回，使用默认成功状态码
+     */
+    public static <T> R<T> success(T data) {
+        return success(RStateConstants.SUCCESS, data, null);
     }
 
-    public static <T, E> R<T, E> success(StateCode stateCode, T data) {
-        return success(stateCode, data, null);
+    /**
+     * 成功返回，可以指定成功状态码
+     */
+    public static <T> R<T> success(ResultState rState, T data) {
+        return success(rState, data, null);
     }
 
-    public static <T, E> R<T, E> success() {
-        return success(StateConstants.SUCCESS, null, null);
+    /**
+     * 成功返回，无数据
+     */
+    public static <T> R<T> success() {
+        return success(RStateConstants.SUCCESS, null, null);
     }
 
-    public static <T, E> R<T, E> success(StateCode stateCode) {
-        return success(stateCode, null, null);
+    /**
+     * 成功返回，仅状态码
+     */
+    public static <T> R<T> success(ResultState rState) {
+        return success(rState, null, null);
     }
 
-    public static <T, E> R<T, E> success(T data, String path) {
-        return success(StateConstants.SUCCESS, data, path);
+    /**
+     * 成功返回，使用默认成功状态码，并包含路径
+     */
+    public static <T> R<T> success(T data, String path) {
+        return success(RStateConstants.SUCCESS, data, path);
     }
 
-    public static <T, E> R<T, E> success(StateCode stateCode, T data, String path) {
-        R<T, E> r = new R<>();
-        r.setCode(stateCode.getCode());
+    /**
+     * 成功返回，可以指定成功状态码，并包含路径
+     */
+    public static <T> R<T> success(ResultState rState, T data, String path) {
+        R<T> r = new R<>();
+        r.setCode(rState.getCode());
         r.setData(data);
-        r.setMsg(stateCode.getMsg());
+        r.setMsg(rState.getMsg());
         r.setPath(path);
         r.setSuccess(true);
         return r;

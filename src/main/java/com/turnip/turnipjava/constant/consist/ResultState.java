@@ -3,7 +3,7 @@ package com.turnip.turnipjava.constant.consist;
 import lombok.Data;
 
 @Data
-public class StateCode {
+public class ResultState {
     /**
      * 错误码
      */
@@ -13,7 +13,7 @@ public class StateCode {
      */
     private final String msg;
 
-    public StateCode(Integer code, String message) {
+    public ResultState(Integer code, String message) {
         this.code = code;
         this.msg = message;
     }

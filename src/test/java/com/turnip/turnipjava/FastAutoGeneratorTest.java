@@ -28,7 +28,7 @@ public class FastAutoGeneratorTest {
                             .xml("mappers").pathInfo(Collections.singletonMap(OutputFile.xml, "src\\main\\resources\\mappers")).build(); // 设置 Mapper XML 文件包名
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("sys_user") // 设置需要生成的表名
+                    builder.addInclude("admin_user") // 设置需要生成的表名
                             .entityBuilder().formatFileName("%sEntity")
                             .enableLombok() // 启用 Lombok
                             .enableTableFieldAnnotation() // 启用字段注解
