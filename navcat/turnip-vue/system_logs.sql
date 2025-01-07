@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `system_logs` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '日志ID',
+  `user_id` int DEFAULT NULL COMMENT '用户ID',
+  `action` varchar(255) NOT NULL COMMENT '操作类型',
+  `description` text COMMENT '操作描述',
+  `request_path` varchar(255) DEFAULT NULL COMMENT '请求路径',
+  `request_params` text DEFAULT NULL COMMENT '请求参数',
+  `response_status` int DEFAULT NULL COMMENT '响应状态码',
+  `device_type` varchar(255) DEFAULT NULL COMMENT '设备类型',
+  `browser_info` varchar(255) DEFAULT NULL COMMENT '浏览器信息',
+  `log_level` varchar(50) DEFAULT NULL COMMENT '日志级别',
+  `module` varchar(255) DEFAULT NULL COMMENT '模块或服务',
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '操作时间',
+  `ip_address` varchar(45) DEFAULT NULL COMMENT 'IP地址',
+  PRIMARY KEY (`id`),
+  KEY `idx_user_id` (`user_id`),
+  KEY `idx_created_at` (`created_at`),
+  KEY `idx_response_status` (`response_status`),
+  KEY `idx_log_level` (`log_level`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='系统操作日志表';

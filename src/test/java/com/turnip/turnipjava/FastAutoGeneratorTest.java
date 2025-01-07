@@ -20,7 +20,7 @@ public class FastAutoGeneratorTest {
                 })
                 .packageConfig(builder -> {
                     builder.parent("com.turnip.turnipjava") // 设置父包名
-                            .controller("controller.admin.user") // 设置 Controller 包名
+//                            .controller("controller.admin.user") // 设置 Controller 包名
                             .entity("model.entity") // 设置实体类包名
                             .mapper("mapper") // 设置 Mapper 接口包名
                             .service("service.intf") // 设置 Service 接口包名
@@ -28,7 +28,7 @@ public class FastAutoGeneratorTest {
                             .xml("mappers").pathInfo(Collections.singletonMap(OutputFile.xml, "src\\main\\resources\\mappers")).build(); // 设置 Mapper XML 文件包名
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("admin_user") // 设置需要生成的表名
+                    builder.addInclude("admin_user_login_history") // 设置需要生成的表名
                             .entityBuilder().formatFileName("%sEntity")
                             .enableLombok() // 启用 Lombok
                             .enableTableFieldAnnotation() // 启用字段注解

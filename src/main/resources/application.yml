@@ -14,3 +14,5 @@ spring:
       platform: mysql
       initialize-schema: always
       cleanup-cron: '0 0/5 * * * *'
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml
