@@ -1,17 +1,16 @@
-package com.turnip.turnipjava.controller.admin.DTO;
+package com.turnip.turnipjava.model.dto;
 
 
 import com.turnip.turnipjava.model.entity.AdminUserLoginHistoryEntity;
 import lombok.Builder;
 import lombok.Data;
-import lombok.experimental.Accessors;
 import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
-@Accessors(chain = true)
+@Builder
 public class AdminUserLoginHistoryDTO  implements Serializable {
 
     private Long id;

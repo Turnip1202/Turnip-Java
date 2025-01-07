@@ -41,6 +41,11 @@ public class R<T, E> implements Serializable {
      */
     private E errors;
 
+    public static <T,E> R<T,E> error(){
+        return error(RStateConstants.FAIL,null, null);
+    }
+
+
     /**
      * 通过R类型返回错误信息和详细的错误数据
      * @param result

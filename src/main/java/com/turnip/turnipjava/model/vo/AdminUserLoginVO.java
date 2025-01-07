@@ -1,4 +1,4 @@
-package com.turnip.turnipjava.controller.admin.VO;
+package com.turnip.turnipjava.model.vo;
 
 
 import lombok.Data;
@@ -8,5 +8,5 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class AdminUserLoginVO {
     private Integer id;
-    private String token;
+    private String tkToken;
 }

@@ -1,8 +1,7 @@
-package com.turnip.turnipjava.controller.admin.DTO;
+package com.turnip.turnipjava.model.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.NonNull;
 
 import java.io.Serial;
 import java.io.Serializable;

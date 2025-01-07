@@ -1,0 +1,22 @@
+{
+  "database": {
+    "url": "jdbc:mysql://localhost:3308/turnip-vue?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull",
+    "username": "kang",
+    "password": "kang"
+  },
+  "tables": ["admin_user_login_history"],
+  "author": "Turnip",
+  "outputDir": "src/main/java",
+  "parent": "com.turnip.turnipjava",
+  "entityPackage": "model.entity",
+  "mapperPackage": "mapper",
+  "servicePackage": "service.intf",
+  "serviceImplPackage": "service.impl",
+  "xmlPackage": "mappers",
+  "xmlPath": "src/main/resources/mappers",
+  "dtoPackage": "model.dto",
+  "enableLombok": true,
+  "enableTableFieldAnnotation": true,
+  "disableController": true,
+  "enableDto": true
+}
