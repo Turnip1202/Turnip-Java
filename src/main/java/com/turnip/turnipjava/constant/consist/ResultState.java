@@ -1,6 +1,7 @@
 package com.turnip.turnipjava.constant.consist;
 
 import lombok.Data;
+import org.springframework.http.HttpStatus;
 
 @Data
 public class ResultState {
@@ -18,4 +19,6 @@ public class ResultState {
         this.msg = message;
     }
 
+    // 定义一些常见的错误状态常量
+    public static final ResultState BAD_REQUEST = new ResultState(HttpStatus.BAD_REQUEST.value(), "参数校验错误");
 }

@@ -61,8 +61,7 @@ public class FastAutoGeneratorTest {
                 })
                 .strategyConfig(builder -> {
                     builder.addInclude(config.tables) // 设置需要生成的表名
-                            .entityBuilder().formatFileName("%sEntity");
-
+                            .entityBuilder().enableFileOverride().formatFileName("%sEntity");
                     // 根据配置文件控制Lombok的启用
                     if (config.enableLombok) {
                         builder.entityBuilder().enableLombok();

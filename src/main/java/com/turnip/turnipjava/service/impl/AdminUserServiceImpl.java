@@ -5,6 +5,7 @@ import com.turnip.turnipjava.common.R;
 import com.turnip.turnipjava.constant.consist.RStateConstants;
 import com.turnip.turnipjava.model.dto.AdminUserLoginDTO;
 import com.turnip.turnipjava.model.dto.AdminUserLoginHistoryDTO;
+import com.turnip.turnipjava.model.entity.AdminUserLoginHistoryEntity;
 import com.turnip.turnipjava.model.vo.AdminUserLoginVO;
 import com.turnip.turnipjava.model.entity.AdminUserEntity;
 import com.turnip.turnipjava.mapper.AdminUserMapper;
@@ -54,8 +55,8 @@ public class AdminUserServiceImpl extends ServiceImpl<AdminUserMapper, AdminUser
         }
         // 用户存在, 记录登录历史信息
         AdminUserLoginHistoryDTO adUshDTO = AdminUserLoginHistoryDTO.builder()
-                .userId(user.getId()).deviceType(Platform).ipAddress(remoteAddr).userAgent(UserAgent).build();
-        adUshService.save(adUshDTO.getEntity());
+                .userId(user.getId()).deviceType(Platform).loginType(loginInfo.getType()).ipAddress(remoteAddr).userAgent(UserAgent).build();
+        adUshService.save(adUshDTO.getEntity(AdminUserLoginHistoryEntity.class));
         //生成token
         String token = JWTUtil.generateToken(UUID.randomUUID().toString(),loginInfo.getUsername(),new HashMap<>(){{put("name","Turnip");}});
 

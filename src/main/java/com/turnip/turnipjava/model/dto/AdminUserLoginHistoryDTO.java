@@ -1,17 +1,19 @@
 package com.turnip.turnipjava.model.dto;
 
-
 import com.turnip.turnipjava.model.entity.AdminUserLoginHistoryEntity;
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.beans.BeanUtils;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
 @Builder
-public class AdminUserLoginHistoryDTO  implements Serializable {
+@EqualsAndHashCode(callSuper = false) // 添加: 指定不调用超类的equals和hashCode方法
+public class AdminUserLoginHistoryDTO extends BaseDTO<AdminUserLoginHistoryEntity> implements Serializable {
+
+
 
     private Long id;
 
@@ -33,7 +35,7 @@ public class AdminUserLoginHistoryDTO  implements Serializable {
     /**
      * 登录类型：1-账号密码，2-手机验证码，3-微信，4-其他
      */
-    private Boolean loginType;
+    private Integer loginType;
 
     /**
      * 登录状态：0-失败，1-成功
@@ -54,11 +56,4 @@ public class AdminUserLoginHistoryDTO  implements Serializable {
      * IP归属地
      */
     private String loginLocation;
-
-    public AdminUserLoginHistoryEntity getEntity(){
-        AdminUserLoginHistoryEntity adminUserLoginHistoryEntity = new AdminUserLoginHistoryEntity();
-         BeanUtils.copyProperties(this,adminUserLoginHistoryEntity);
-        return adminUserLoginHistoryEntity;
-    }
-
 }

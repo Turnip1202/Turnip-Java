@@ -40,10 +40,18 @@ public class R<T, E> implements Serializable {
      * 错误详细信息
      */
     private E errors;
+    public static <T,E> R<T,E> error(String msg){
+        return error(RStateConstants.FAIL,msg);
+    }
+    public static <T, E> R<T, E> error(ResultState state, String msg) {
+        return error(state.getCode(), msg, null, null);
+    }
 
     public static <T,E> R<T,E> error(){
         return error(RStateConstants.FAIL,null, null);
     }
+
+
 
 
     /**
