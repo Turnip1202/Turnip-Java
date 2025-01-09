@@ -40,7 +40,7 @@ public class AdminUserLoginHistoryDTO extends BaseDTO<AdminUserLoginHistoryEntit
     /**
      * 登录状态：0-失败，1-成功
      */
-    private Boolean loginStatus;
+    private Integer loginStatus;
 
     /**
      * 设备类型

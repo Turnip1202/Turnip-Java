@@ -5,14 +5,13 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
  * <p>
- * 后台用户表
+ * 用户表
  * </p>
  *
  * @author Turnip
@@ -20,8 +19,8 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@TableName("admin_user")
-public class AdminUserEntity implements Serializable {
+@TableName("users")
+public class UsersEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -38,12 +37,6 @@ public class AdminUserEntity implements Serializable {
     private String username;
 
     /**
-     * 真实姓名
-     */
-    @TableField("real_name")
-    private String realName;
-
-    /**
      * 密码
      */
     @TableField("password")
@@ -56,76 +49,16 @@ public class AdminUserEntity implements Serializable {
     private String passwordSalt;
 
     /**
-     * 手机号
-     */
-    @TableField("phone")
-    private String phone;
-
-    /**
      * 邮箱
      */
     @TableField("email")
     private String email;
 
     /**
-     * 性别：0-未知，1-男，2-女
-     */
-    @TableField("gender")
-    private Integer gender;
-
-    /**
-     * 头像URL
-     */
-    @TableField("avatar")
-    private String avatar;
-
-    /**
-     * 生日
-     */
-    @TableField("birthday")
-    private LocalDate birthday;
-
-    /**
-     * 简介
-     */
-    @TableField("bio")
-    private String bio;
-
-    /**
      * 状态：0-禁用，1-启用，2-锁定，3-已删除
      */
     @TableField("status")
     private Integer status;
-
-    /**
-     * 角色ID
-     */
-    @TableField("role_id")
-    private Integer roleId;
-
-    /**
-     * 部门ID
-     */
-    @TableField("department_id")
-    private Integer departmentId;
-
-    /**
-     * 注册IP
-     */
-    @TableField("register_ip")
-    private String registerIp;
-
-    /**
-     * 登录失败次数
-     */
-    @TableField("login_attempts")
-    private Integer loginAttempts;
-
-    /**
-     * 乐观锁版本号
-     */
-    @TableField("version")
-    private Integer version;
 
     /**
      * 创建时间

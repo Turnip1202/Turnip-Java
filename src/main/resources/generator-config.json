@@ -4,9 +4,9 @@
     "username": "kang",
     "password": "kang"
   },
-  "tables": ["admin_user_login_history"],
+  "tables": ["admin_user","admin_user_login_history","users"],
   "author": "Turnip",
-  "outputDir": "src/main/java",
+  "outputDir": "src\\main\\java",
   "parent": "com.turnip.turnipjava",
   "entityPackage": "model.entity",
   "mapperPackage": "mapper",

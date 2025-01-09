@@ -15,7 +15,7 @@ import lombok.Setter;
  * </p>
  *
  * @author Turnip
- * @since 2025-01-06
+ * @since 2025-01-08
  */
 @Getter
 @Setter
@@ -49,13 +49,13 @@ public class AdminUserLoginHistoryEntity implements Serializable {
      * 登录类型：1-账号密码，2-手机验证码，3-微信，4-其他
      */
     @TableField("login_type")
-    private Boolean loginType;
+    private Integer loginType;
 
     /**
      * 登录状态：0-失败，1-成功
      */
     @TableField("login_status")
-    private Boolean loginStatus;
+    private Integer loginStatus;
 
     /**
      * 设备类型

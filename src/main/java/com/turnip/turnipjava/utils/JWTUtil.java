@@ -23,7 +23,7 @@ public class JWTUtil {
      * @return 生成的JWT令牌字符串
      */
     public static String generateToken(String id, String username, Map<String, Object> claims) {
-        Algorithm algorithm = Algorithm.HMAC512(SECRET_KEY);
+        Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY);
 
         return JWT.create()
                 .withJWTId(id) // 设置令牌的唯一标识
@@ -31,7 +31,8 @@ public class JWTUtil {
                 .withIssuedAt(new Date()) // 设置令牌的签发时间
                 .withExpiresAt(new Date(System.currentTimeMillis() + EXPIRATION_TIME)) // 设置令牌的过期时间
                 .withPayload(claims) // 设置令牌的自定义声明
-                .sign(algorithm); // 使用HS512算法和SECRET_KEY对令牌进行签名
+                .sign(algorithm) // 使用HS512算法和SECRET_KEY对令牌进行签名
+                ;
     }
 
     /**

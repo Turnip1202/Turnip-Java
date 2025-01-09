@@ -3,6 +3,7 @@ package com.turnip.turnipjava.controller.admin.user;
 import com.turnip.turnipjava.annotation.InterfaceEnabled;
 import com.turnip.turnipjava.common.R;
 import com.turnip.turnipjava.common.validate.Insert;
+import com.turnip.turnipjava.common.validate.Update;
 import com.turnip.turnipjava.model.dto.AdminUserLoginDTO;
 import com.turnip.turnipjava.model.dto.AdminUserRegisterDTO;
 import com.turnip.turnipjava.model.vo.AdminUserLoginVO;
@@ -37,14 +38,14 @@ public class AdminUserController {
 
     @Operation(summary = "登录")
     @PostMapping("/login")
-    public R<AdminUserLoginVO,String> login(@RequestBody @Validated(Default.class) AdminUserLoginDTO loginInfo, HttpServletRequest request) {
+    public R<AdminUserLoginVO,String> login(@RequestBody @Validated(Insert.class) AdminUserLoginDTO loginInfo, HttpServletRequest request) {
      return adminUserService.login(loginInfo,request);
     }
 
     @InterfaceEnabled(value = true)
     @Operation(summary = "注册")
     @PostMapping("/register")
-    public R register(@RequestBody @Validated(Default.class) AdminUserRegisterDTO registerInfo) {
+    public R register(@RequestBody @Validated(Update.class) AdminUserRegisterDTO registerInfo) {
         return R.success();
     }
 

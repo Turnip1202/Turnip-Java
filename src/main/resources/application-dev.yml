@@ -26,7 +26,7 @@ knife4j:
     # 是否显示默认的Response Code
     enableResponseCode: true
     # 是否开启请求参数缓存
-    enableRequestCache: true
+    enableRequestCache: false
     # 是否开启Host
     enableHost: false
     # 是否开启Footer
