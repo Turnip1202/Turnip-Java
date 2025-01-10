@@ -2,7 +2,7 @@ package com.turnip.turnipjava.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.turnip.turnipjava.common.R;
-import com.turnip.turnipjava.constant.consist.RStateConstants;
+import com.turnip.turnipjava.constant.RStateConstants;
 import com.turnip.turnipjava.model.dto.AdminUserLoginDTO;
 import com.turnip.turnipjava.model.dto.AdminUserLoginHistoryDTO;
 import com.turnip.turnipjava.model.entity.AdminUserLoginHistoryEntity;

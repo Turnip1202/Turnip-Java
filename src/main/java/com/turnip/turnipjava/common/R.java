@@ -1,7 +1,7 @@
 package com.turnip.turnipjava.common;
 
 import com.turnip.turnipjava.constant.consist.ResultState;
-import com.turnip.turnipjava.constant.consist.RStateConstants;
+import com.turnip.turnipjava.constant.RStateConstants;
 import lombok.Data;
 
 import java.io.Serializable;
