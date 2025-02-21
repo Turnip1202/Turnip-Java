@@ -2,6 +2,7 @@ package com.turnip.turnipjava.common;
 
 import com.turnip.turnipjava.constant.consist.ResultState;
 import com.turnip.turnipjava.constant.consist.RStateConstants;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -13,32 +14,39 @@ public class R<T, E> implements Serializable {
      * 状态码
      * @see ResultState#getCode()
      */
+    @Schema(description = "状态码")
     private Integer code;
     /**
      * 返回数据
      */
+    @Schema(description = "返回数据")
     private T data;
     /**
      * 错误提示，用户可阅读
      *
      * @see ResultState#getMsg() ()
      */
+    @Schema(description = "提示信息，用户可阅读")
     private String msg;
     /**
      * 请求路径
      */
+    @Schema(description = "请求路径")
     private String path;
     /**
      * 成功标志
      */
+    @Schema(description = "成功标志")
     private Boolean success;
     /**
      * 时间戳
      */
+    @Schema(description = "时间戳")
     private LocalDateTime timestamp = LocalDateTime.now();
     /**
      * 错误详细信息
      */
+    @Schema(description = "错误详细信息")
     private E errors;
     public static <T,E> R<T,E> error(String msg){
         return error(RStateConstants.FAIL,msg);

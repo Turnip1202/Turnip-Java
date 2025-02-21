@@ -98,7 +98,7 @@ public class FastAutoGeneratorTest {
                 .injectionConfig(builder -> {
                     if (config.enableDto) {
                         // 自定义 DTO 文件输出路径
-//                        builder.customFile(Collections.singletonMap("DTO.java", "/templates/dto.java.ftl"));
+                        //builder.customFile(Collections.singletonMap("DTO.java", "/templates/dto.java.ftl"));
                     }
                 })
                 .templateEngine(new FreemarkerTemplateEngine()) // 使用 Freemarker 模板引擎

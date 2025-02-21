@@ -4,7 +4,7 @@
     "username": "kang",
     "password": "kang"
   },
-  "tables": ["admin_user","admin_user_login_history","users"],
+  "tables": ["categories"],
   "author": "Turnip",
   "outputDir": "src\\main\\java",
   "parent": "com.turnip.turnipjava",
@@ -17,6 +17,6 @@
   "dtoPackage": "model.dto",
   "enableLombok": true,
   "enableTableFieldAnnotation": true,
-  "disableController": true,
+  "disableController": false,
   "enableDto": true
 }

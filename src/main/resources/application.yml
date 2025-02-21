@@ -1,3 +1,5 @@
+server:
+  port: 8030
 spring:
   application:
     name: Turnip-Java
@@ -6,8 +8,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3308/turnip-vue?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull
-    username: kang
-    password: kang
+    username: test
+    password: test
   session:
     jdbc:
       table-name: spring_session

@@ -15,7 +15,7 @@ import lombok.Setter;
  * </p>
  *
  * @author Turnip
- * @since 2025-01-08
+ * @since 2025-02-19
  */
 @Getter
 @Setter
@@ -58,7 +58,7 @@ public class UsersEntity implements Serializable {
      * 状态：0-禁用，1-启用，2-锁定，3-已删除
      */
     @TableField("status")
-    private Integer status;
+    private Boolean status;
 
     /**
      * 创建时间

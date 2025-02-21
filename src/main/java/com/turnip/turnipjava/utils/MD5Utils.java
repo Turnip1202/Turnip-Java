@@ -77,4 +77,29 @@ public class MD5Utils {
         }
         return result;
     }
+
+    /**
+     * 验证多次加密结果
+     * @param text 待验证的明文
+     * @param times 加密次数
+     * @param encryptedText 已加密的文本
+     * @return 是否匹配
+     */
+    public static boolean verifyEncryptTimes(String text, int times, String encryptedText) {
+        String reEncrypted = encryptTimes(text, times);
+        return reEncrypted.equals(encryptedText);
+    }
+
+    /**
+     * 验证带盐值多次加密结果
+     * @param text 待验证的明文
+     * @param salt 盐值
+     * @param times 加密次数
+     * @param encryptedText 已加密的文本
+     * @return 是否匹配
+     */
+    public static boolean verifyEncryptTimes(String text, String salt, int times, String encryptedText) {
+        String reEncrypted = encryptTimes(text, salt, times);
+        return reEncrypted.equals(encryptedText);
+    }
 }

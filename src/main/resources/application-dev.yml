@@ -3,6 +3,13 @@ server:
 #  servlet:
 #    context-path: /api_v1
 # springdoc-openapi项目配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/turnip-vue?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull
+    username: test
+    password: test
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html

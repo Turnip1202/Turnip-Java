@@ -16,7 +16,7 @@ import lombok.Setter;
  * </p>
  *
  * @author Turnip
- * @since 2025-01-08
+ * @since 2025-02-19
  */
 @Getter
 @Setter
@@ -71,7 +71,7 @@ public class AdminUserEntity implements Serializable {
      * 性别：0-未知，1-男，2-女
      */
     @TableField("gender")
-    private Integer gender;
+    private Boolean gender;
 
     /**
      * 头像URL
@@ -95,7 +95,7 @@ public class AdminUserEntity implements Serializable {
      * 状态：0-禁用，1-启用，2-锁定，3-已删除
      */
     @TableField("status")
-    private Integer status;
+    private Boolean status;
 
     /**
      * 角色ID
