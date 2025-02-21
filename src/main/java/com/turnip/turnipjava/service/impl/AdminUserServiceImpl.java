@@ -8,7 +8,7 @@ import cn.hutool.json.JSON;
 import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.turnip.turnipjava.common.R;
-import com.turnip.turnipjava.constant.consist.RStateConstants;
+import com.turnip.turnipjava.constant.RStateConstants;
 import com.turnip.turnipjava.constant.consist.ResultState;
 import com.turnip.turnipjava.model.dto.AdminUserLoginDTO;
 import com.turnip.turnipjava.model.dto.AdminUserLoginHistoryDTO;

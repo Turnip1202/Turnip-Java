@@ -1,4 +1,6 @@
-package com.turnip.turnipjava.constant.consist;
+package com.turnip.turnipjava.constant;
+
+import com.turnip.turnipjava.constant.consist.ResultState;
 
 public interface RStateConstants {
     // 通用状态码

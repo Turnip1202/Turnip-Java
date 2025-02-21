@@ -10,7 +10,7 @@ import com.turnip.turnipjava.common.R;
 import com.turnip.turnipjava.common.validate.Insert;
 import com.turnip.turnipjava.common.validate.Query;
 import com.turnip.turnipjava.common.validate.Update;
-import com.turnip.turnipjava.constant.consist.RStateConstants;
+import com.turnip.turnipjava.constant.RStateConstants;
 import com.turnip.turnipjava.constant.consist.ResultState;
 import com.turnip.turnipjava.model.dto.AdminUserLoginDTO;
 import com.turnip.turnipjava.model.dto.AdminUserRegisterDTO;
