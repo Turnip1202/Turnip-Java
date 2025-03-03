@@ -4,7 +4,7 @@
     "username": "kang",
     "password": "kang"
   },
-  "tables": ["categories"],
+  "tables": ["menus"],
   "author": "Turnip",
   "outputDir": "src\\main\\java",
   "parent": "com.turnip.turnipjava",

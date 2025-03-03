@@ -1,7 +1,7 @@
 /*
  Navicat Premium Dump SQL
 
- Source Server         : MySQL-84-3308
+ Source Server         : MySQL84-3308
  Source Server Type    : MySQL
  Source Server Version : 80402 (8.4.2)
  Source Host           : localhost:3308
@@ -11,7 +11,7 @@
  Target Server Version : 80402 (8.4.2)
  File Encoding         : 65001
 
- Date: 06/01/2025 11:58:38
+ Date: 23/02/2025 00:18:49
 */
 
 SET NAMES utf8mb4;
@@ -47,12 +47,12 @@ CREATE TABLE `admin_user`  (
   UNIQUE INDEX `idx_phone`(`phone` ASC) USING BTREE,
   UNIQUE INDEX `idx_email`(`email` ASC) USING BTREE,
   INDEX `idx_department_id`(`department_id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '后台用户表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '后台用户表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin_user
 -- ----------------------------
-INSERT INTO `admin_user` VALUES (1, 'admin', 'Turnip', '123456', NULL, '13901234567', 'zhangwei@example.com', 1, 'https://example.com/avatars/1.jpg', '1985-06-15', '系统管理员，负责系统维护与管理', 1, 1, 1, '192.168.1.100', 0, 1, '2023-01-01 09:00:00', '2025-01-04 18:00:08', NULL);
+INSERT INTO `admin_user` VALUES (1, 'admin', 'Turnip', '123456', NULL, '13901234567', 'zhangwei@example.com', 1, 'https://www.helloimg.com/i/2025/01/09/677f76c4af7e7.jpg', '1985-06-15', '系统管理员，负责系统维护与管理', 1, 1, 1, '192.168.1.100', 0, 1, '2023-01-01 09:00:00', '2025-01-09 21:22:20', NULL);
 INSERT INTO `admin_user` VALUES (2, 'liuyang', '刘洋', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13812345678', 'liuyang@example.com', 1, 'https://example.com/avatars/2.jpg', '1990-03-22', '销售部主管，负责华东区销售', 1, 2, 2, '192.168.1.101', 0, 1, '2023-02-15 10:30:00', '2025-01-04 18:00:08', NULL);
 INSERT INTO `admin_user` VALUES (3, 'wangxiao', '王晓', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13923456789', 'wangxiao@example.com', 2, 'https://example.com/avatars/3.jpg', '1988-12-05', '人力资源专员，负责招聘与培训', 1, 2, 3, '192.168.1.102', 0, 1, '2023-03-01 14:20:00', '2025-01-04 18:00:08', NULL);
 INSERT INTO `admin_user` VALUES (4, 'zhangli', '张丽', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13834567890', 'zhangli@example.com', 2, 'https://example.com/avatars/4.jpg', '1992-09-18', '财务部会计，负责日常账务处理', 1, 2, 4, '192.168.1.103', 0, 1, '2023-03-10 11:15:00', '2025-01-04 18:00:08', NULL);
@@ -62,6 +62,8 @@ INSERT INTO `admin_user` VALUES (7, 'zhoujie', '周杰', '$2a$10$RpFJjxYiXdEsAGn
 INSERT INTO `admin_user` VALUES (8, 'wanghua', '王华', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13478901234', 'wanghua@example.com', 1, 'https://example.com/avatars/8.jpg', '1989-08-08', '前销售经理', 0, 2, 2, '192.168.1.107', 0, 1, '2023-01-10 08:00:00', '2025-01-04 18:00:08', NULL);
 INSERT INTO `admin_user` VALUES (9, 'zhangsan', '张三', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13389012345', 'zhangsan@example.com', 1, 'https://example.com/avatars/9.jpg', '1993-05-20', '客服专员', 2, 2, 3, '192.168.1.108', 0, 1, '2023-02-20 10:00:00', '2025-01-04 18:00:08', NULL);
 INSERT INTO `admin_user` VALUES (10, 'lixiang', '李想', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13290123456', 'lixiang@example.com', 2, 'https://example.com/avatars/10.jpg', '1995-12-25', '实习生，市场部', 1, 2, 2, '192.168.1.109', 0, 1, '2025-01-04 18:00:08', '2025-01-04 18:00:08', NULL);
+INSERT INTO `admin_user` VALUES (11, 'kang', '康', 'c5be0029024f3e44bb1af2a03f2d1e58', '94634f02532f4128b7f8', '17633505860', 'turnip@qq.com', 0, 'http://example.jpg', '2025-02-19', '测试', 1, 0, 0, '', 0, 0, '2025-02-19 16:34:04', '2025-02-19 16:34:04', NULL);
+INSERT INTO `admin_user` VALUES (12, 'kang1', '康', 'ab5897dab327cd3611c624fccaea9cc0', '54a830dd7c0c4c399f11', '17633505866', 'turnip1@qq.com', 0, 'http://example.jpg', '2025-02-19', '测试', 1, 0, 0, '127.0.0.1', 0, 0, '2025-02-19 16:44:06', '2025-02-19 16:44:06', NULL);
 
 -- ----------------------------
 -- Table structure for admin_user_login_history
@@ -80,11 +82,58 @@ CREATE TABLE `admin_user_login_history`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_user_id`(`user_id` ASC) USING BTREE,
   INDEX `idx_login_time`(`login_time` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户登录历史记录' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 48 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户登录历史记录' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin_user_login_history
 -- ----------------------------
+INSERT INTO `admin_user_login_history` VALUES (1, 1, '2025-01-06 21:55:09', '127.0.0.1', 1, 1, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL, NULL);
+INSERT INTO `admin_user_login_history` VALUES (2, 1, '2025-01-06 22:01:16', '127.0.0.1', 1, 1, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL, NULL);
+INSERT INTO `admin_user_login_history` VALUES (3, 1, '2025-01-07 10:27:43', '127.0.0.1', 1, 1, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL, NULL);
+INSERT INTO `admin_user_login_history` VALUES (4, 1, '2025-01-07 11:17:35', '127.0.0.1', 1, 1, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL, NULL);
+INSERT INTO `admin_user_login_history` VALUES (5, 1, '2025-01-07 11:32:06', '127.0.0.1', 1, 1, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL, NULL);
+INSERT INTO `admin_user_login_history` VALUES (6, 1, '2025-01-07 11:32:11', '127.0.0.1', 1, 1, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL, NULL);
+INSERT INTO `admin_user_login_history` VALUES (7, 1, '2025-01-07 11:33:12', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (8, 1, '2025-01-07 13:36:50', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (9, 1, '2025-01-07 13:36:56', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (10, 1, '2025-01-07 13:37:28', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (11, 1, '2025-01-07 13:38:15', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (12, 1, '2025-01-07 13:39:02', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (13, 1, '2025-01-07 13:39:09', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (14, 1, '2025-01-07 13:41:55', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (15, 1, '2025-01-07 13:45:27', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (16, 1, '2025-01-07 13:48:42', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (17, 1, '2025-01-09 19:59:57', '192.168.1.69', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (18, 1, '2025-01-09 20:13:37', '192.168.1.69', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (19, 1, '2025-01-09 20:15:57', '192.168.1.69', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (20, 1, '2025-01-09 20:16:02', '192.168.1.69', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (21, 1, '2025-01-09 20:33:26', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (22, 1, '2025-01-09 21:09:19', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (23, 1, '2025-01-09 21:09:51', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (24, 1, '2025-01-09 21:10:11', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (25, 1, '2025-01-09 21:10:13', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (26, 1, '2025-01-09 21:10:14', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (27, 1, '2025-01-09 21:10:14', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (28, 1, '2025-01-09 21:10:14', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (29, 1, '2025-01-09 21:10:14', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (30, 1, '2025-01-09 21:10:15', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (31, 1, '2025-01-09 21:10:15', '192.168.1.19', 1, 1, NULL, 'Mozilla/5.0 (Macintosh; CPU OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5.1 Mobile/15E148 Safari/604.1', NULL);
+INSERT INTO `admin_user_login_history` VALUES (32, 1, '2025-01-09 21:10:28', '192.168.1.69', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (33, 1, '2025-01-09 21:11:06', '192.168.1.70', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (34, 1, '2025-01-09 21:11:33', '192.168.1.70', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (35, 1, '2025-01-09 21:12:17', '192.168.1.70', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (36, 1, '2025-01-09 21:12:21', '192.168.1.70', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (37, 1, '2025-01-09 21:14:48', '192.168.1.70', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (38, 1, '2025-01-09 21:15:09', '192.168.1.70', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (39, 1, '2025-01-09 21:16:34', '192.168.1.70', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (40, 1, '2025-01-09 21:18:32', '192.168.1.70', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (41, 1, '2025-01-09 21:19:41', '192.168.1.70', 1, 1, NULL, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (42, 1, '2025-02-19 14:29:27', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (43, 1, '2025-02-19 15:12:30', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (44, 12, '2025-02-19 16:50:53', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (45, 11, '2025-02-21 21:19:47', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (46, 11, '2025-02-21 22:44:04', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (47, 11, '2025-02-21 23:03:34', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
 
 -- ----------------------------
 -- Table structure for admin_user_login_history_archive
@@ -126,7 +175,7 @@ CREATE TABLE `categories`  (
   UNIQUE INDEX `idx_name`(`name` ASC) USING BTREE,
   INDEX `idx_parent_id`(`parent_id` ASC) USING BTREE,
   INDEX `idx_status`(`status` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '分类表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '分类表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of categories
@@ -154,7 +203,7 @@ CREATE TABLE `comments`  (
   INDEX `idx_user_type`(`user_type` ASC) USING BTREE,
   INDEX `idx_parent_id`(`parent_id` ASC) USING BTREE,
   INDEX `idx_status`(`status` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '评论表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '评论表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of comments
@@ -171,7 +220,7 @@ CREATE TABLE `download_limits`  (
   `monthly_limit` int NOT NULL COMMENT '每月下载限制',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `idx_user_type`(`user_type` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '下载限制表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '下载限制表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of download_limits
@@ -192,7 +241,7 @@ CREATE TABLE `event_registrations`  (
   INDEX `idx_event_id`(`event_id` ASC) USING BTREE,
   INDEX `idx_user_id`(`user_id` ASC) USING BTREE,
   INDEX `idx_registration_time`(`registration_time` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '活动报名表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '活动报名表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of event_registrations
@@ -216,7 +265,7 @@ CREATE TABLE `events`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_start_time`(`start_time` ASC) USING BTREE,
   INDEX `idx_end_time`(`end_time` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '活动表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '活动表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of events
@@ -259,7 +308,7 @@ CREATE TABLE `feedbacks`  (
   INDEX `idx_user_id`(`user_id` ASC) USING BTREE,
   INDEX `idx_status`(`status` ASC) USING BTREE,
   INDEX `idx_type`(`type` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '反馈表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '反馈表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of feedbacks
@@ -280,7 +329,7 @@ CREATE TABLE `member_points`  (
   `updated_at` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_user_id`(`user_id` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '会员积分表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '会员积分表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of member_points
@@ -321,7 +370,7 @@ CREATE TABLE `notifications`  (
   INDEX `idx_user_id`(`user_id` ASC) USING BTREE,
   INDEX `idx_created_at`(`created_at` ASC) USING BTREE,
   INDEX `idx_type`(`type` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '通知表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '通知表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of notifications
@@ -339,7 +388,7 @@ CREATE TABLE `role_permissions`  (
   `updated_at` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_role_id`(`role_id` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '角色权限表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '角色权限表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of role_permissions
@@ -356,7 +405,7 @@ CREATE TABLE `roles`  (
   `created_at` datetime NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `updated_at` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '角色表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '角色表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of roles
@@ -423,7 +472,7 @@ CREATE TABLE `system_logs`  (
   INDEX `idx_created_at`(`created_at` ASC) USING BTREE,
   INDEX `idx_response_status`(`response_status` ASC) USING BTREE,
   INDEX `idx_log_level`(`log_level` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '系统操作日志表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '系统操作日志表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of system_logs
@@ -441,7 +490,7 @@ CREATE TABLE `user_downloads`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_user_id`(`user_id` ASC) USING BTREE,
   INDEX `idx_download_time`(`download_time` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户下载记录表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户下载记录表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user_downloads
@@ -464,7 +513,7 @@ CREATE TABLE `user_login_history`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_user_id`(`user_id` ASC) USING BTREE,
   INDEX `idx_login_time`(`login_time` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户登录历史记录表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户登录历史记录表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user_login_history
@@ -510,7 +559,7 @@ CREATE TABLE `users`  (
   UNIQUE INDEX `idx_username`(`username` ASC) USING BTREE,
   UNIQUE INDEX `idx_email`(`email` ASC) USING BTREE,
   INDEX `idx_status`(`status` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
@@ -530,7 +579,7 @@ CREATE TABLE `wallpaper_reviews`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_wallpaper_id`(`wallpaper_id` ASC) USING BTREE,
   INDEX `idx_reviewer_id`(`reviewer_id` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '壁纸审核记录表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '壁纸审核记录表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of wallpaper_reviews
@@ -552,7 +601,7 @@ CREATE TABLE `wallpapers`  (
   `updated_by` int NULL DEFAULT NULL COMMENT '更新者ID',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_category_id`(`category_id` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '壁纸表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '壁纸表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of wallpapers

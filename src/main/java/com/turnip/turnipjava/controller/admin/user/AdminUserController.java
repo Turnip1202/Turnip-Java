@@ -1,10 +1,6 @@
 package com.turnip.turnipjava.controller.admin.user;
 
-import cn.hutool.captcha.CaptchaUtil;
-import cn.hutool.captcha.ICaptcha;
-import cn.hutool.captcha.LineCaptcha;
-import cn.hutool.core.codec.Base64;
-import cn.hutool.core.lang.Console;
+
 import com.turnip.turnipjava.annotation.InterfaceEnabled;
 import com.turnip.turnipjava.common.R;
 import com.turnip.turnipjava.common.validate.Insert;
@@ -55,6 +51,7 @@ public class AdminUserController {
     /**
      * 获取验证码
      */
+    @Operation(summary = "获取验证码")
     @GetMapping("/captcha")
     public Object getCaptcha(@Param("uuid")  String uuid, HttpServletRequest request, HttpServletResponse response)   {
      try{
@@ -65,6 +62,7 @@ public class AdminUserController {
 
     }
 
+    @Operation(summary = "获取用户信息")
     @GetMapping("/{id}")
     public R<AdminUserInfoVO,Object> getUserInfo(@PathVariable("id") Integer id) {
         AdminUserEntity userInfo = adminUserService.getById(id);
