@@ -7,3 +7,9 @@ CREATE TABLE IF NOT EXISTS `roles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色表';
 
+
+ALTER TABLE `roles` 
+ADD COLUMN `is_superadmin` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否超级管理员（0-否 1-是）';
+
+INSERT INTO `roles` (`name`, `description`, `is_superadmin`)
+VALUES ('超级管理员', '拥有所有权限', 1);

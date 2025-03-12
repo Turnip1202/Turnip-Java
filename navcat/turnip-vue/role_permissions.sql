@@ -7,3 +7,9 @@ CREATE TABLE IF NOT EXISTS `role_permissions` (
   PRIMARY KEY (`id`),
   KEY `idx_role_id` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色权限表';
+
+
+
+-- 插入权限数据
+INSERT INTO role_permissions (role_id, permission) 
+VALUES (1, 'user:view');

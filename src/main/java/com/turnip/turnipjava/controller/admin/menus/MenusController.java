@@ -28,7 +28,7 @@ public class MenusController {
     private IMenusService menusService;
 
     @Operation(summary = "菜单管理")
-    @GetMapping("/test")
+    @GetMapping("/getMenus")
     public R<List<MenusVO>,Object> test(){
         R<List<MenusVO>,Object>  menus = menusService.getMenus();
         return menus;

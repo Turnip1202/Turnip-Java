@@ -65,10 +65,15 @@ public class AdminUserController {
     @Operation(summary = "获取用户信息")
     @GetMapping("/{id}")
     public R<AdminUserInfoVO,Object> getUserInfo(@PathVariable("id") Integer id) {
-        AdminUserEntity userInfo = adminUserService.getById(id);
-        AdminUserInfoVO adminUserInfoVO = new AdminUserInfoVO();
-        BeanUtils.copyProperties(userInfo, adminUserInfoVO);
-        return R.success(adminUserInfoVO);
+        try{
+            AdminUserEntity userInfo = adminUserService.getById(id);
+            AdminUserInfoVO adminUserInfoVO = new AdminUserInfoVO();
+            BeanUtils.copyProperties(userInfo, adminUserInfoVO);
+            return R.success(RStateConstants.LOGIN_SUCCESS, adminUserInfoVO);
+        }
+        catch (Exception e) {
+            return R.error(RStateConstants.LOGIN_ERROR);
+        }
     }
 
 

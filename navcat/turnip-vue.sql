@@ -11,7 +11,7 @@
  Target Server Version : 80402 (8.4.2)
  File Encoding         : 65001
 
- Date: 23/02/2025 00:18:49
+ Date: 12/03/2025 15:51:50
 */
 
 SET NAMES utf8mb4;
@@ -52,18 +52,7 @@ CREATE TABLE `admin_user`  (
 -- ----------------------------
 -- Records of admin_user
 -- ----------------------------
-INSERT INTO `admin_user` VALUES (1, 'admin', 'Turnip', '123456', NULL, '13901234567', 'zhangwei@example.com', 1, 'https://www.helloimg.com/i/2025/01/09/677f76c4af7e7.jpg', '1985-06-15', '系统管理员，负责系统维护与管理', 1, 1, 1, '192.168.1.100', 0, 1, '2023-01-01 09:00:00', '2025-01-09 21:22:20', NULL);
-INSERT INTO `admin_user` VALUES (2, 'liuyang', '刘洋', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13812345678', 'liuyang@example.com', 1, 'https://example.com/avatars/2.jpg', '1990-03-22', '销售部主管，负责华东区销售', 1, 2, 2, '192.168.1.101', 0, 1, '2023-02-15 10:30:00', '2025-01-04 18:00:08', NULL);
-INSERT INTO `admin_user` VALUES (3, 'wangxiao', '王晓', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13923456789', 'wangxiao@example.com', 2, 'https://example.com/avatars/3.jpg', '1988-12-05', '人力资源专员，负责招聘与培训', 1, 2, 3, '192.168.1.102', 0, 1, '2023-03-01 14:20:00', '2025-01-04 18:00:08', NULL);
-INSERT INTO `admin_user` VALUES (4, 'zhangli', '张丽', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13834567890', 'zhangli@example.com', 2, 'https://example.com/avatars/4.jpg', '1992-09-18', '财务部会计，负责日常账务处理', 1, 2, 4, '192.168.1.103', 0, 1, '2023-03-10 11:15:00', '2025-01-04 18:00:08', NULL);
-INSERT INTO `admin_user` VALUES (5, 'chenming', '陈明', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13745678901', 'chenming@example.com', 1, 'https://example.com/avatars/5.jpg', '1987-07-30', '技术部开发工程师，全栈开发', 1, 2, 5, '192.168.1.104', 0, 1, '2023-04-01 09:45:00', '2025-01-04 18:00:08', NULL);
-INSERT INTO `admin_user` VALUES (6, 'linfei', '林飞', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13656789012', 'linfei@example.com', 1, 'https://example.com/avatars/6.jpg', '1991-11-11', '市场部经理，负责品牌推广', 1, 2, 2, '192.168.1.105', 0, 1, '2023-04-15 16:30:00', '2025-01-04 18:00:08', NULL);
-INSERT INTO `admin_user` VALUES (7, 'zhoujie', '周杰', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13567890123', 'zhoujie@example.com', 1, 'https://example.com/avatars/7.jpg', '1986-04-25', '研发部主管，负责产品研发', 1, 2, 5, '192.168.1.106', 0, 1, '2023-05-01 13:20:00', '2025-01-04 18:00:08', NULL);
-INSERT INTO `admin_user` VALUES (8, 'wanghua', '王华', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13478901234', 'wanghua@example.com', 1, 'https://example.com/avatars/8.jpg', '1989-08-08', '前销售经理', 0, 2, 2, '192.168.1.107', 0, 1, '2023-01-10 08:00:00', '2025-01-04 18:00:08', NULL);
-INSERT INTO `admin_user` VALUES (9, 'zhangsan', '张三', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13389012345', 'zhangsan@example.com', 1, 'https://example.com/avatars/9.jpg', '1993-05-20', '客服专员', 2, 2, 3, '192.168.1.108', 0, 1, '2023-02-20 10:00:00', '2025-01-04 18:00:08', NULL);
-INSERT INTO `admin_user` VALUES (10, 'lixiang', '李想', '$2a$10$RpFJjxYiXdEsAGnWp/8fsOetMuOON96Ntk/Ym2M/RKRyU0GZseaDC', NULL, '13290123456', 'lixiang@example.com', 2, 'https://example.com/avatars/10.jpg', '1995-12-25', '实习生，市场部', 1, 2, 2, '192.168.1.109', 0, 1, '2025-01-04 18:00:08', '2025-01-04 18:00:08', NULL);
-INSERT INTO `admin_user` VALUES (11, 'kang', '康', 'c5be0029024f3e44bb1af2a03f2d1e58', '94634f02532f4128b7f8', '17633505860', 'turnip@qq.com', 0, 'http://example.jpg', '2025-02-19', '测试', 1, 0, 0, '', 0, 0, '2025-02-19 16:34:04', '2025-02-19 16:34:04', NULL);
-INSERT INTO `admin_user` VALUES (12, 'kang1', '康', 'ab5897dab327cd3611c624fccaea9cc0', '54a830dd7c0c4c399f11', '17633505866', 'turnip1@qq.com', 0, 'http://example.jpg', '2025-02-19', '测试', 1, 0, 0, '127.0.0.1', 0, 0, '2025-02-19 16:44:06', '2025-02-19 16:44:06', NULL);
+INSERT INTO `admin_user` VALUES (1, 'admin', 'Turnip', 'c5be0029024f3e44bb1af2a03f2d1e58', '94634f02532f4128b7f8', '17633505861', 'turnip1202@qq.com', 1, 'https://www.helloimg.com/i/2025/01/09/677f76c4af7e7.jpg', '1985-06-15', '超级管理员', 1, 1, 1, '192.168.1.100', 0, 1, '2023-01-01 09:00:00', '2025-02-23 01:36:24', NULL);
 
 -- ----------------------------
 -- Table structure for admin_user_login_history
@@ -82,7 +71,7 @@ CREATE TABLE `admin_user_login_history`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_user_id`(`user_id` ASC) USING BTREE,
   INDEX `idx_login_time`(`login_time` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 48 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户登录历史记录' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 51 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '用户登录历史记录' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin_user_login_history
@@ -134,6 +123,9 @@ INSERT INTO `admin_user_login_history` VALUES (44, 12, '2025-02-19 16:50:53', '1
 INSERT INTO `admin_user_login_history` VALUES (45, 11, '2025-02-21 21:19:47', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
 INSERT INTO `admin_user_login_history` VALUES (46, 11, '2025-02-21 22:44:04', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
 INSERT INTO `admin_user_login_history` VALUES (47, 11, '2025-02-21 23:03:34', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (48, 11, '2025-02-23 00:31:56', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (49, 1, '2025-03-12 11:01:32', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0', NULL);
+INSERT INTO `admin_user_login_history` VALUES (50, 1, '2025-03-12 11:35:05', '127.0.0.1', 1, 1, '\"Windows\"', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0', NULL);
 
 -- ----------------------------
 -- Table structure for admin_user_login_history_archive
@@ -354,6 +346,38 @@ CREATE TABLE `members`  (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for menus
+-- ----------------------------
+DROP TABLE IF EXISTS `menus`;
+CREATE TABLE `menus`  (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT '菜单ID',
+  `parent_id` int NULL DEFAULT NULL COMMENT '父菜单ID',
+  `menu_type` enum('directory','menu','button') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '菜单类型（目录/菜单/按钮）',
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '显示名称',
+  `icon` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '图标',
+  `path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '路由路径',
+  `sort` int NULL DEFAULT 0 COMMENT '排序',
+  `permission` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '所需权限标识',
+  `created_at` datetime NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updated_at` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `idx_parent_id`(`parent_id` ASC) USING BTREE,
+  INDEX `idx_permission`(`permission` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '菜单表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of menus
+-- ----------------------------
+INSERT INTO `menus` VALUES (1, NULL, 'directory', '系统管理', 'system', NULL, 1, NULL, '2025-02-23 01:07:22', '2025-03-12 14:12:41');
+INSERT INTO `menus` VALUES (2, 1, 'menu', '用户管理', 'user', '/system/users', 1, 'user:view', '2025-02-23 01:07:22', '2025-03-12 14:11:47');
+INSERT INTO `menus` VALUES (3, 1, 'menu', '角色管理', 'role', '/system/roles', 12, 'role:view', '2025-02-23 01:07:22', '2025-02-23 01:07:22');
+INSERT INTO `menus` VALUES (4, NULL, 'button', '删除用户', NULL, NULL, 0, 'user:delete', '2025-02-23 01:07:22', '2025-02-23 01:07:22');
+INSERT INTO `menus` VALUES (5, NULL, 'directory', '高级管理', 'setting', NULL, 11, NULL, '2025-02-23 01:28:51', '2025-03-12 15:06:53');
+INSERT INTO `menus` VALUES (6, 5, 'menu', '审计日志', NULL, NULL, 8, 'audit:view', '2025-02-23 01:28:51', '2025-03-12 14:13:31');
+INSERT INTO `menus` VALUES (7, 5, 'button', '导出日志', NULL, NULL, 0, 'audit:export', '2025-02-23 01:28:51', '2025-02-23 01:28:51');
+INSERT INTO `menus` VALUES (8, 1, 'menu', '菜单管理', NULL, '/system/menus', 6, 'system:menus', '2025-03-12 11:22:56', '2025-03-12 14:11:36');
+
+-- ----------------------------
 -- Table structure for notifications
 -- ----------------------------
 DROP TABLE IF EXISTS `notifications`;
@@ -388,11 +412,12 @@ CREATE TABLE `role_permissions`  (
   `updated_at` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_role_id`(`role_id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '角色权限表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '角色权限表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of role_permissions
 -- ----------------------------
+INSERT INTO `role_permissions` VALUES (1, 1, 'user:view', '2025-02-23 01:18:36', '2025-02-23 01:18:36');
 
 -- ----------------------------
 -- Table structure for roles
@@ -404,12 +429,14 @@ CREATE TABLE `roles`  (
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT '角色描述',
   `created_at` datetime NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `updated_at` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `is_superadmin` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否超级管理员（0-否 1-是）',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '角色表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '角色表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of roles
 -- ----------------------------
+INSERT INTO `roles` VALUES (1, '超级管理员', '拥有所有权限', '2025-02-23 01:27:13', '2025-02-23 01:27:13', 1);
 
 -- ----------------------------
 -- Table structure for spring_session
